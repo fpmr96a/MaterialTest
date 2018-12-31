@@ -2,10 +2,17 @@
   my-transferlist works!
 </p>
 <mat-card>
-  <mat-form-field>
-    <input matInput placeholder="First Name" dividerColor="accent">
+  <mat-form-field appearance="outline">
+    <mat-label>First Name</mat-label>
+    <input matInput placeholder="Placeholder" dividerColor="accent">
   </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Last name" dividerColor="accent">
+  <mat-form-field appearance="standard">
+    <input matInput placeholder="standard" dividerColor="accent">
+  </mat-form-field>
+  <mat-form-field appearance="legacy">
+    <input matInput placeholder="legacy" dividerColor="accent">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <input matInput placeholder="fill" dividerColor="accent">
   </mat-form-field>
 </mat-card>
