@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, 
         MatTabsModule, MatCardModule, MatIconModule,
         MatFormFieldModule, MatInputModule} from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';        
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +28,8 @@ import { FilteredTransferlistComponent } from './transferlists/filtered-transfer
     MatCardModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
