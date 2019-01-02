@@ -11,15 +11,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyTransferlistComponent } from './transferlists/my-transferlist.component';
 import { FilteredTransferlistComponent } from './transferlists/filtered-transferlist.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { VacanciesComponent } from './vacancy/vacancies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyTransferlistComponent,
-    FilteredTransferlistComponent
+    FilteredTransferlistComponent,
+    VacanciesComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,

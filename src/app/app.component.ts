@@ -21,7 +21,11 @@ export class AppComponent implements OnInit{
             label: 'Transfer List',
             link: './filteredtransferlist',
             index: 1
-        }, 
+        }, {
+          label: 'Vacancies',
+          link: './vacancy',
+          index: 1
+      }, 
     ];
 }
 ngOnInit(): void {
