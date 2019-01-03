@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyTransferlistComponent } from './transferlists/my-transferlist.component';
 import { FilteredTransferlistComponent } from './transferlists/filtered-transferlist.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { VacanciesComponent } from './vacancy/vacancies.component';
 
 @NgModule({
@@ -24,6 +24,7 @@ import { VacanciesComponent } from './vacancy/vacancies.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
