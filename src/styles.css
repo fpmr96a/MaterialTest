@@ -3,9 +3,13 @@
 
 mat-form-field.mat-form-field {
     font-size: 14px;
-  }
+}
   
-  .mat-form-field-appearance-outline .mat-form-field-infix {
+.mat-form-field-appearance-outline .mat-form-field-infix {
     padding:8px;
-  }
+}
+
+.mat-form-field-wrapper {
+    padding-bottom:.50em;
+}
  
