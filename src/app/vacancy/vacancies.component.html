@@ -1,3 +1,22 @@
-<p>
-  vacancies works!
-</p>
+<mat-card>
+    <div class='input-row' 
+      fxLayout
+      fxLayout.xs='column'
+      fxLayoutGap='10px'
+      fxLayoutGap.xs='0'>
+      <mat-form-field appearance="outline" fxFlex >
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="First Name" dividerColor="accent">
+      </mat-form-field>
+      <mat-form-field appearance="outline" fxFlex>
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Last Name" dividerColor="accent">
+        </mat-form-field>
+    </div>
+    <div class='input-row'>
+        <mat-form-field appearance="outline" fxFlex>
+            <mat-label>Street Address 1</mat-label>
+            <input matInput placeholder="Street Address 1" dividerColor="accent">
+          </mat-form-field>
+    </div>
+</mat-card>

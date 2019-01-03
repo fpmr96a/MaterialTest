@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule, MatCheckboxModule, 
         MatTabsModule, MatCardModule, MatIconModule,
         MatFormFieldModule, MatInputModule} from '@angular/material';
@@ -13,6 +14,8 @@ import { MyTransferlistComponent } from './transferlists/my-transferlist.compone
 import { FilteredTransferlistComponent } from './transferlists/filtered-transferlist.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { VacanciesComponent } from './vacancy/vacancies.component';
+import { GridModule } from '@progress/kendo-angular-grid';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import { VacanciesComponent } from './vacancy/vacancies.component';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    GridModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
