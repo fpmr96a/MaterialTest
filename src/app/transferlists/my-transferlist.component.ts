@@ -8,12 +8,29 @@ import {
   DataStateChangeEvent
 } from '@progress/kendo-angular-grid';
 
+export interface JobClass {
+  value: string;
+  viewValue: string;
+}
 @Component({
   selector: 'app-my-transferlist',
   templateUrl: './my-transferlist.component.html',
   styleUrls: ['./my-transferlist.component.css']
 })
 export class MyTransferlistComponent implements OnInit {
+  selectedValue: string;
+  selectedJobClass: string;
+
+  jobClasses: JobClass[] = [
+    {value: '1', viewValue: 'Clinical Social Worker'},
+    {value: '2', viewValue: 'Clinical Social Worker Associate'},
+    {value: '3', viewValue: 'Forensic Head Nurse'},
+    {value: '4', viewValue: 'Forensic Nurse'},
+    {value: '5', viewValue: 'Forensic Treatment Specialist'},
+    {value: '6', viewValue: 'Head Nurse'},
+    {value: '7', viewValue: 'Lead Forensic Treatment Specialist'},
+    {value: '8', viewValue: 'Licensed Practical Nurse'}, 
+  ]
 
   constructor() { }
 
