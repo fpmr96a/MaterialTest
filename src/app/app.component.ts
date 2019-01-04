@@ -25,7 +25,11 @@ export class AppComponent implements OnInit{
           label: 'Vacancies',
           link: './vacancy',
           index: 1
-      }, 
+        }, {
+            label: 'Reports',
+            link: './reports',
+            index: 1
+         }, 
     ];
 }
 ngOnInit(): void {

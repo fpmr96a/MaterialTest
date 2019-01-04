@@ -15,6 +15,7 @@ import { FilteredTransferlistComponent } from './transferlists/filtered-transfer
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { VacanciesComponent } from './vacancy/vacancies.component';
 import { GridModule } from '@progress/kendo-angular-grid';
+import { ReportsComponent } from './reports/reports.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { GridModule } from '@progress/kendo-angular-grid';
     AppComponent,
     MyTransferlistComponent,
     FilteredTransferlistComponent,
-    VacanciesComponent
+    VacanciesComponent,
+    ReportsComponent
   ],
   imports: [
     BrowserModule,
