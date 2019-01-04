@@ -1,6 +1,7 @@
 <mat-card>
-    <mat-form-field style="margin-top:20px; width:275px;">
-        <select matNativeControl placeholder="Job Class" [(ngModel)]="selectedValue" name="jobclass">
+    <mat-form-field style="margin-top:20px; width:275px;" appearance="outline">
+        <mat-label>Job Class</mat-label>
+        <select matNativeControl placeholder="Select Job Class" [(ngModel)]="selectedValue" name="jobclass">
             <option value="" selected></option>
             <option *ngFor="let jobclass of jobClasses" [value]="jobclass.value">
             {{jobclass.viewValue}}
