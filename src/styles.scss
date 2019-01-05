@@ -46,3 +46,8 @@ main-mat-container {
     margin-top: 5px;
   }
 
+  $primary: #ff69b4;
+
+  //@import '~@progress/kendo-theme-material/scss/all';
+  @import '~@progress/kendo-theme-default/scss/grid';
+
