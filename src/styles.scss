@@ -1,5 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+$primary: #ff69b4;
+
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+.mat-raised-button.mat-primary {
+    background-color: $primary;
+}
+
+mat-tab-link.mat-tab-label-active {
+    background-color: $primary;
+}
 
 
 mat-form-field.mat-form-field {
@@ -46,8 +56,8 @@ main-mat-container {
     margin-top: 5px;
   }
 
-  $primary: #ff69b4;
+
 
   //@import '~@progress/kendo-theme-material/scss/all';
-  @import '~@progress/kendo-theme-default/scss/grid';
+  @import '~@progress/kendo-theme-default/scss/all';
 
