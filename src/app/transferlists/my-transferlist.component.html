@@ -2,7 +2,7 @@
     <mat-form-field style="margin-top:20px; width:275px;" >
         <mat-label>Job Class</mat-label>
         <select matNativeControl placeholder="Select Job Class" [formControl]="jobClassFormControl" name="jobclass">
-            <option value="" selected></option>
+            <option value="" label= "-- Select One --" selected></option>
             <option *ngFor="let jobclass of jobClasses" [value]="jobclass.value">
             {{jobclass.viewValue}}
             </option>
@@ -13,7 +13,7 @@
     </mat-form-field>
     
     <mat-card-header class="matcard-header-rounded-top-left">
-       <mat-card-title>My Transfer List - {{jobClassFormControl.viewValue}}</mat-card-title>
+       <mat-card-title>My Transfer List - {{jobClassFormControl.value}}</mat-card-title>
     </mat-card-header>
     <kendo-grid
         [data]="gridData"

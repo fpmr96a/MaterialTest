@@ -4,14 +4,17 @@ $primary: #ff69b4;
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
 .mat-raised-button.mat-primary {
+    background-color:$primary ;
+}
+
+// Color of Active Tab Underline
+// =============================
+.mat-tab-group.mat-primary .mat-ink-bar,.mat-tab-nav-bar.mat-primary .mat-ink-bar {
     background-color: $primary;
 }
 
-mat-tab-link.mat-tab-label-active {
-    background-color: $primary;
-}
-
-
+// Text Box Sizing and styling
+// ===========================
 mat-form-field.mat-form-field {
     font-size: 14px;
 }
@@ -31,7 +34,9 @@ main-mat-container {
   left: 0;
   right: 0;
   }
-     
+  
+ // Section Header With Top Left Corner ONLY rounded
+ // ================================================= 
 .matcard-header-rounded-top-left {
     height: 25px;
     border-top-left-radius: 8px;
@@ -41,6 +46,8 @@ main-mat-container {
     background: linear-gradient(to left, rgba(255,0,0,0), rgb(46, 77, 123));
    }
 
+   // Section Header with Entire LEFT side roundered
+   // ==============================================
   .matcard-header-rounded-left {
     height: 25px;
     border-radius: 8px;
@@ -51,6 +58,8 @@ main-mat-container {
     background: linear-gradient(to left, rgba(255,0,0,0), rgb(46, 77, 123));
    }
 
+   // Sizing for Secton Header, which is mat card title
+   // =================================================
   .mat-card-header .mat-card-title {
     font-size: 12px;
     margin-top: 5px;
