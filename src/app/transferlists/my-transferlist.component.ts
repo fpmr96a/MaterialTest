@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms'
 import { process, State } from '@progress/kendo-data-query';
 import { sampleProducts } from '../../assets/data/products';
 
@@ -18,8 +19,7 @@ export interface JobClass {
   styleUrls: ['./my-transferlist.component.css']
 })
 export class MyTransferlistComponent implements OnInit {
-  selectedValue: string;
-  selectedJobClass: string;
+  jobClassFormControl = new FormControl('', Validators.required);
 
   jobClasses: JobClass[] = [
     {value: '1', viewValue: 'Clinical Social Worker'},

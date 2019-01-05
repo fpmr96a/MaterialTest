@@ -1,19 +1,20 @@
 <mat-card>
     <mat-form-field style="margin-top:20px; width:275px;" >
         <mat-label>Job Class</mat-label>
-        <select matNativeControl placeholder="Select Job Class" [(ngModel)]="selectedValue" name="jobclass">
+        <select matNativeControl placeholder="Select Job Class" [formControl]="jobClassFormControl" name="jobclass">
             <option value="" selected></option>
             <option *ngFor="let jobclass of jobClasses" [value]="jobclass.value">
             {{jobclass.viewValue}}
             </option>
         </select>
+        <mat-error *ngIf="jobClassFormControl.hasError('required')">
+            Please select a job class
+        </mat-error>
     </mat-form-field>
     
     <mat-card-header class="matcard-header-rounded-top-left">
-   
-            <mat-card-title>My Transfer List - {{selectedValue}}</mat-card-title>
-        
-        </mat-card-header>
+       <mat-card-title>My Transfer List - {{jobClassFormControl.viewValue}}</mat-card-title>
+    </mat-card-header>
     <kendo-grid
         [data]="gridData"
         [pageSize]="state.take"
