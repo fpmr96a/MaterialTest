@@ -20,7 +20,8 @@
 } */
 
 
-$primary: #ff69b4;
+$primary: #2E4d7B;
+$accent: #ff69b4;
 
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
@@ -38,10 +39,12 @@ $primary: #ff69b4;
 // ===========================
 mat-form-field.mat-form-field {
     font-size: 14px;
+    
 }
   
 .mat-form-field-appearance-outline .mat-form-field-infix {
     padding:8px;
+    
 }
 
 .mat-form-field-wrapper {
