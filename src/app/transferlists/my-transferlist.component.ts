@@ -35,6 +35,9 @@ export class MyTransferlistComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.jobClassFormControl.valueChanges.subscribe(
+       value => console.log(value)
+    );
   }
 
   public state: State = {
