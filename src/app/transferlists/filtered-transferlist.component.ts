@@ -28,7 +28,7 @@ export class FilteredTransferlistComponent implements OnInit {
     );
 
     this.jobClassFormControl.valueChanges.subscribe(
-      id => console.log(id)
+      value => console.log(value)
     );
 
        
