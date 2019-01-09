@@ -6,7 +6,24 @@
   <button mat-raised-button>Of</button>
   <button mat-raised-button color="primary">Primary</button>
   <button mat-raised-button color="accent">Accent</button>
+
+  
 </mat-card>
+<mat-card>
+  <mat-form-field style="margin-top:20px; width:275px;" color="primary">
+    <mat-label>Job Class</mat-label>
+    <select matNativeControl placeholder="Select Job Class" [formControl]="jobClassFormControl" name="jobclass">
+        <option value="" label= "-- Select One --" selected></option>
+        <option *ngFor="let jobclass of ToDos" [value]="jobclass.name">
+        {{jobclass.name}}
+        </option>
+    </select>
+    <mat-error *ngIf="jobClassFormControl.hasError('required')">
+        Please select a job class
+    </mat-error>
+</mat-form-field>
+</mat-card>
+
 
 <mat-card>
   <button mat-fab color="primary">
