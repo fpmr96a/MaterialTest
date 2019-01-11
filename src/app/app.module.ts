@@ -5,7 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule, MatCheckboxModule, 
         MatTabsModule, MatCardModule, MatIconModule,
-        MatFormFieldModule, MatInputModule} from '@angular/material';
+        MatFormFieldModule, MatInputModule, MatTableModule} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';        
 
 import { AppRoutingModule } from './app-routing.module';
@@ -39,6 +39,7 @@ import { ReportsComponent } from './reports/reports.component';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTableModule,
     FlexLayoutModule,
     GridModule,
     HttpClientModule

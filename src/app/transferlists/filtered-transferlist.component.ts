@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms'
 
 import { TransferlistService } from './transferlist.service.service';
 import { ToDo } from '../models/ToDo';
+import { MyTransferList } from '../models/MyTransferList';
+import { MatTableDataSource, MatPaginator } from '@angular/material';
 
 
 @Component({
@@ -16,6 +18,13 @@ export class FilteredTransferlistComponent implements OnInit {
   errorMessage = '';
 
   ToDos: ToDo[] = [];
+  filteredTransferLists: MyTransferList[] = [];
+
+  displayedColumns: string[] = ['Facility_Short_Description', 'FunctionalUnitDescription', 'ShiftDescription', 'FT_PT_Description'];
+  //dataSource = new MatTableDataSource<MyTransferList>(this.filteredTransferLists);
+  dataSource = new MatTableDataSource();
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private transferlistService: TransferlistService) { }
 
@@ -31,7 +40,22 @@ export class FilteredTransferlistComponent implements OnInit {
       value => console.log(value)
     );
 
-       
+    //this.dataSource.paginator = this.paginator;
+
+    this.transferlistService.getMyTransferList().subscribe(
+      mytransferlists => {
+        this.dataSource.data = mytransferlists;
+      /*   this.filteredTransferLists = mytransferlists; */
+      },
+      error => this.errorMessage = <any>error
+    );
+     
   }
 
+  
+  /* public dataStateChange(state: DataStateChangeEvent): void {
+      this.state = state;
+      this.gridData = process(this.MyTransferLists, this.state);
+  }
+ */
 }

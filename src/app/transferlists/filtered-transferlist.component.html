@@ -1,14 +1,3 @@
-<p>
-  filtered-transferlist works!
-</p>
-<mat-card>
-  <button mat-button>All</button>
-  <button mat-raised-button>Of</button>
-  <button mat-raised-button color="primary">Primary</button>
-  <button mat-raised-button color="accent">Accent</button>
-
-  
-</mat-card>
 <mat-card>
   <mat-form-field style="margin-top:20px; width:275px;" color="primary">
     <mat-label>Job Class</mat-label>
@@ -22,28 +11,48 @@
         Please select a job class
     </mat-error>
 </mat-form-field>
-</mat-card>
 
+<mat-card-header class="matcard-header-rounded-top-left">
+  <mat-card-title>My Transfer List - {{jobClassFormControl.value}}</mat-card-title>
+</mat-card-header>
+<div class="mat-elevation-z8">
+  <mat-table [dataSource]="dataSource">
 
-<mat-card>
-  <button mat-fab color="primary">
-    <mat-icon>send</mat-icon>
-  </button>
-  <button mat-mini-fab color="accent">
-      <mat-icon>send</mat-icon>
-  </button>
-</mat-card>
-<div class='container' 
-      fxLayout
-      fxLayout.xs='column'
-      fxLayoutGap='10px'
-      fxLayoutGap.xs='0'>
-    <mat-form-field appearance="outline">
-      <mat-label>First Name</mat-label>
-      <input matInput placeholder="First Name" dividerColor="accent">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Last Name</mat-label>
-        <input matInput placeholder="Last Name" dividerColor="accent">
-      </mat-form-field>
+    <!-- Position Column -->
+    <ng-container matColumnDef="Facility_Short_Description">
+      <th mat-header-cell *matHeaderCellDef>Facility </th>
+      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.Facility_Short_Description}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="FunctionalUnitDescription">
+      <th mat-header-cell *matHeaderCellDef> Functional Unit </th>
+      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.FunctionalUnitDescription}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="ShiftDescription">
+      <th mat-header-cell *matHeaderCellDef> Shift </th>
+      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.ShiftDescription}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="FT_PT_Description">
+      <th mat-header-cell *matHeaderCellDef> FT/PT </th>
+      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.FT_PT_Description}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </mat-table>
+
+  <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
 </div>
+
+<mat-card-actions>
+ <button mat-raised-button color="primary">New Transfer List</button>
+</mat-card-actions> 
+</mat-card>
+
+
+

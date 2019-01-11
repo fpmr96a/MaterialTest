@@ -5,20 +5,30 @@ import { Observable, of, throwError } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
 
 import { ToDo } from '../models/ToDo';
+import { MyTransferList } from '../models/MyTransferList';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TransferlistService {
   //private transferlistUrl = 'api/todo';
-  private transferlistUrl = 'https://localhost:5001/api/Todo/ ';
+  private todoUrl = 'https://localhost:5001/api/Todo/ ';
+  private transferlistUrl = 'https://localhost:5001/api/MyTransferList/ ';
   // the value assigned, when using a real back-end web service would be:
   //  'www.myWebService.com/api/products';
 
   constructor(private http: HttpClient) { }
 
   getToDos(): Observable<ToDo[]> {
-    return this.http.get<ToDo[]>(this.transferlistUrl)
+    return this.http.get<ToDo[]>(this.todoUrl)
+      .pipe(
+        tap(data => console.log(JSON.stringify(data))),
+        catchError(this.handleError)
+      );
+  }
+
+  getMyTransferList(): Observable<MyTransferList[]> {
+    return this.http.get<MyTransferList[]>(this.transferlistUrl)
       .pipe(
         tap(data => console.log(JSON.stringify(data))),
         catchError(this.handleError)
