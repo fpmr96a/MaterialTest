@@ -1,14 +1,14 @@
 export interface MyTransferList {
     id: number;
-    Facility_ID: number;
-    Chrtfld_Dept_ID: string;
-    Shift_CD: string;
-    Facility_Short_Description: string;
-    FunctionalUnitDescription: string;
-    ShiftDescription: string;
-    AddedToList_DateTime: Date;
-    FT_PT_Code: string;
-    FT_PT_Description: string;
-    UserName: string;
-    Job_Code4: string;
+    facility_ID: number;
+    chrtfld_Dept_ID: string;
+    shift_CD: string;
+    facility_Short_Description: string;
+    functionalUnitDescription: string;
+    shiftDescription: string;
+    addedToList_DateTime: Date;
+    fT_PT_Code: string;
+    fT_PT_Description: string;
+    userName: string;
+    job_Code4: string;
  }

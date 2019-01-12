@@ -20,7 +20,7 @@ export class FilteredTransferlistComponent implements OnInit {
   ToDos: ToDo[] = [];
   filteredTransferLists: MyTransferList[] = [];
 
-  displayedColumns: string[] = ['Facility_Short_Description', 'FunctionalUnitDescription', 'ShiftDescription', 'FT_PT_Description'];
+  displayedColumns: string[] = ['facility_Short_Description', 'functionalUnitDescription', 'shiftDescription', 'fT_PT_Description'];
   //dataSource = new MatTableDataSource<MyTransferList>(this.filteredTransferLists);
   dataSource = new MatTableDataSource();
 

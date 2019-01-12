@@ -19,27 +19,27 @@
   <mat-table [dataSource]="dataSource">
 
     <!-- Position Column -->
-    <ng-container matColumnDef="Facility_Short_Description">
+    <ng-container matColumnDef="facility_Short_Description">
       <th mat-header-cell *matHeaderCellDef>Facility </th>
-      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.Facility_Short_Description}} </td>
+      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.facility_Short_Description}} </td>
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="FunctionalUnitDescription">
+    <ng-container matColumnDef="functionalUnitDescription">
       <th mat-header-cell *matHeaderCellDef> Functional Unit </th>
-      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.FunctionalUnitDescription}} </td>
+      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.functionalUnitDescription}} </td>
     </ng-container>
 
     <!-- Weight Column -->
-    <ng-container matColumnDef="ShiftDescription">
+    <ng-container matColumnDef="shiftDescription">
       <th mat-header-cell *matHeaderCellDef> Shift </th>
-      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.ShiftDescription}} </td>
+      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.shiftDescription}} </td>
     </ng-container>
 
     <!-- Symbol Column -->
-    <ng-container matColumnDef="FT_PT_Description">
+    <ng-container matColumnDef="fT_PT_Description">
       <th mat-header-cell *matHeaderCellDef> FT/PT </th>
-      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.FT_PT_Description}} </td>
+      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.fT_PT_Description}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
