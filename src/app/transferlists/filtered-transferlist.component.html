@@ -20,30 +20,30 @@
 
     <!-- Position Column -->
     <ng-container matColumnDef="facility_Short_Description">
-      <th mat-header-cell *matHeaderCellDef>Facility </th>
-      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.facility_Short_Description}} </td>
+      <mat-header-cell *matHeaderCellDef>Facility </mat-header-cell>
+      <mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.facility_Short_Description}} </mat-cell>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="functionalUnitDescription">
-      <th mat-header-cell *matHeaderCellDef> Functional Unit </th>
-      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.functionalUnitDescription}} </td>
+      <mat-header-cell *matHeaderCellDef> Functional Unit </mat-header-cell>
+      <mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.functionalUnitDescription}} </mat-cell>
     </ng-container>
 
     <!-- Weight Column -->
     <ng-container matColumnDef="shiftDescription">
-      <th mat-header-cell *matHeaderCellDef> Shift </th>
-      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.shiftDescription}} </td>
+      <mat-header-cell *matHeaderCellDef> Shift </mat-header-cell>
+      <mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.shiftDescription}} </mat-cell>
     </ng-container>
 
     <!-- Symbol Column -->
     <ng-container matColumnDef="fT_PT_Description">
-      <th mat-header-cell *matHeaderCellDef> FT/PT </th>
-      <td mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.fT_PT_Description}} </td>
+      <mat-header-cell *matHeaderCellDef> FT/PT </mat-header-cell>
+      <mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.fT_PT_Description}} </mat-cell>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
 
   <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
