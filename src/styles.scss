@@ -27,6 +27,7 @@ $secondary: #FFF7E7;
 
 .mat-raised-button.mat-primary {
     background-color:$primary ;
+    height: 35px;
 }
 
 // Color of Active Tab Underline
@@ -86,6 +87,11 @@ mat-form-field.mat-form-field {
     margin-top: 5px;
   }
 
+  .mat-card-actions {
+      margin-left: 0px !important;
+      margin-top: 10px;
+  }
+
   // mat-table styling
   // =================
   .mat-row.hovered {
@@ -103,6 +109,9 @@ mat-form-field.mat-form-field {
       font-size: 12px;
   }
   
+  .mat-row {
+      min-height: 36px;
+  }
   .mat-header-row {
     min-height: 40px;
     background-color: whitesmoke;

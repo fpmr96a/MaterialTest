@@ -1,5 +1,5 @@
-<mat-card>
-  <mat-form-field style="margin-top:20px; width:275px;" color="primary">
+<mat-card >
+  <mat-form-field style="margin-top:20px; width:275px; margin-left: 10px;" color="primary">
     <mat-label>Job Class</mat-label>
     <select matNativeControl placeholder="Select Job Class" [formControl]="jobClassFormControl" name="jobclass">
         <option value="" label= "-- Select One --" selected></option>
@@ -15,7 +15,7 @@
 <mat-card-header class="matcard-header-rounded-top-left">
   <mat-card-title>My Transfer List - {{jobClassFormControl.value}}</mat-card-title>
 </mat-card-header>
-<div class="mat-elevation-z5">
+<div class="mat-elevation-z2">
   <mat-table [dataSource]="dataSource">
 
     <!-- Position Column -->
@@ -49,8 +49,10 @@
   <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
 </div>
 
-<mat-card-actions>
- <button mat-raised-button color="primary">New Transfer List</button>
+<mat-card-actions align="center">
+ <button mat-raised-button color="primary">Delete All</button>
+ <button mat-raised-button color="primary" style="margin-left: 20px;">Add to Transfer List</button>
+ <button mat-raised-button color="primary" style="margin-left: 10px;">Print</button>
 </mat-card-actions> 
 </mat-card>
 
