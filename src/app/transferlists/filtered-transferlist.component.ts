@@ -14,7 +14,7 @@ import { MatTableDataSource, MatPaginator } from '@angular/material';
 })
 export class FilteredTransferlistComponent implements OnInit {
   jobClassFormControl = new FormControl('', Validators.required);
-
+  selectedRowIndex: number;
   errorMessage = '';
 
   ToDos: ToDo[] = [];
@@ -52,6 +52,9 @@ export class FilteredTransferlistComponent implements OnInit {
      
   }
 
+  highlight(row){
+    this.selectedRowIndex = row.id;
+    }
   
   /* public dataStateChange(state: DataStateChangeEvent): void {
       this.state = state;
