@@ -4,7 +4,7 @@ import { FormControl, Validators } from '@angular/forms'
 import { TransferlistService } from './transferlist.service.service';
 import { ToDo } from '../models/ToDo';
 import { MyTransferList } from '../models/MyTransferList';
-import { MatTableDataSource, MatPaginator } from '@angular/material';
+import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 
 
 @Component({
@@ -25,6 +25,7 @@ export class FilteredTransferlistComponent implements OnInit {
   dataSource = new MatTableDataSource();
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   constructor(private transferlistService: TransferlistService) { }
 
@@ -45,6 +46,7 @@ export class FilteredTransferlistComponent implements OnInit {
     this.transferlistService.getMyTransferList().subscribe(
       mytransferlists => {
         this.dataSource.data = mytransferlists;
+        this.dataSource.sort = this.sort;
       /*   this.filteredTransferLists = mytransferlists; */
       },
       error => this.errorMessage = <any>error

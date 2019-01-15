@@ -16,7 +16,7 @@
   <mat-card-title>My Transfer List - {{jobClassFormControl.value}}</mat-card-title>
 </mat-card-header>
 <div class="mat-elevation-z2">
-  <mat-table [dataSource]="dataSource">
+  <mat-table [dataSource]="dataSource" matSort>
 
     <!-- Position Column -->
     <ng-container matColumnDef="facility_Short_Description">
@@ -26,7 +26,7 @@
 
     <!-- Name Column -->
     <ng-container matColumnDef="functionalUnitDescription">
-      <mat-header-cell *matHeaderCellDef> Functional Unit </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Functional Unit </mat-header-cell>
       <mat-cell *matCellDef="let myTransferListItem"> {{myTransferListItem.functionalUnitDescription}} </mat-cell>
     </ng-container>
 
