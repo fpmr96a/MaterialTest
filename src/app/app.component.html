@@ -1,5 +1,9 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<nav mat-tab-nav-bar>
+<div style="align-content: center; width:99%; margin-left:5px;margin-top:5px;">
+  <img src="./assets/images/TransferList-Header.jpg"  style="align-self: left;">
+  <img alt="DMHAS Logo" id="Img2" runat="server" src="./assets/images/DMHASLogo.gif" style="align-self: right;"/>
+</div>
+
+<nav mat-tab-nav-bar style="margin-left: 190px">
   <a mat-tab-link
   *ngFor="let link of navLinks"
   [routerLink]="link.link"
@@ -8,4 +12,15 @@
  {{link.label}}
 </a>
 </nav>
-<router-outlet></router-outlet>
+<mat-sidenav-container  class="sidenav-container" >
+  <mat-sidenav 
+      [fixedInViewport]="true"
+      [fixedTopGap]="106"
+      [fixedBottomGap]="0" 
+      mode="side" opened="true" 
+      class="sidenav">Sidenav content
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content">
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
