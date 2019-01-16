@@ -18,7 +18,22 @@
       [fixedTopGap]="106"
       [fixedBottomGap]="0" 
       mode="side" opened="true" 
-      class="sidenav">Sidenav content
+      class="sidenav">
+          <button mat-button [matMenuTriggerFor]="tools" style="margin-left:20px;">Tools</button>
+          <mat-menu #tools="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="docs">Documentation</button>
+            <button mat-menu-item >Employee Profile</button>
+            <button mat-menu-item >Add to Transfer Lists</button>
+            <button mat-menu-item >Delete Transfer Lists</button>
+            <button mat-menu-item >Employee Seniority</button>
+            <button mat-menu-item >Delete ALL Transfer Lists</button>
+            <button mat-menu-item >Functional Unit Setup</button>
+          </mat-menu>
+          <mat-menu #docs="matMenu">
+            <button mat-menu-item >Training Guides</button>
+            <button mat-menu-item >Facilities and Functional Units</button>
+            <button mat-menu-item >Functional Job Descriptions</button>
+          </mat-menu>
   </mat-sidenav>
   <mat-sidenav-content class="sidenav-content">
       <router-outlet></router-outlet>

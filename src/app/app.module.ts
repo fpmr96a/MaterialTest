@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import {MatButtonModule, MatCheckboxModule, 
+import {MatButtonModule, MatCheckboxModule, MatMenuModule,
         MatTabsModule, MatCardModule, MatIconModule,
         MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule,  MatSidenavModule,} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';        
@@ -16,6 +16,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { VacanciesComponent } from './vacancy/vacancies.component';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { ReportsComponent } from './reports/reports.component';
+import { ConfirmDialogComponent } from './dialog/confirm-dialog.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ReportsComponent } from './reports/reports.component';
     MyTransferlistComponent,
     FilteredTransferlistComponent,
     VacanciesComponent,
-    ReportsComponent
+    ReportsComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,7 @@ import { ReportsComponent } from './reports/reports.component';
     MatInputModule,
     MatTableModule,
     MatSortModule,
+    MatMenuModule,
     MatSidenavModule,
     FlexLayoutModule,
     GridModule,
