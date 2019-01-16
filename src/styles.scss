@@ -159,6 +159,23 @@ mat-form-field.mat-form-field {
     border-top: gainsboro .5px solid;
 }
 
+.mat-menu-item {
+    color: #00264f !important;
+  }
+  
+  button.mat-menu-item{
+      background-color: white;
+  }
+  
+  button.mat-menu-item:hover {
+      background-color:#5e79aa !important;
+      color: #fff !important;
+  }
+
+/* .mat-menu-item {
+    background-color: #ccc4b5;
+} */
+
   //@import '~@progress/kendo-theme-material/scss/all';
   @import '~@progress/kendo-theme-default/scss/all';
 
