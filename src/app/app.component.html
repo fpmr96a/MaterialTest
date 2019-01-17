@@ -1,6 +1,6 @@
-<div style="align-content: center; width:99%; margin-left:5px;margin-top:5px;">
-  <img src="./assets/images/DMHAS-TransferList-Wide.jpg"  style="align-self: left;">
-  <img alt="DMHAS Logo" id="Img2" runat="server" src="./assets/images/DMHASLogo.gif" style="align-self: right;"/>
+<div style="align-content: center; width:99%; margin-left:5px;margin-top:5px;" fxLayout="row" fxLayoutAlign="space-between start">
+  <img  flex src="./assets/images/DMHAS-TransferList-Wide.jpg"  style="align-self: left;">
+  <img flex alt="DMHAS Logo" id="Img2" runat="server" src="./assets/images/DMHASLogo.gif" style="align-self: right;"/>
 </div>
 
 <nav mat-tab-nav-bar style="margin-left: 190px">
@@ -35,7 +35,7 @@
             <button mat-menu-item >Functional Job Descriptions</button>
           </mat-menu>
   </mat-sidenav>
-  <mat-sidenav-content class="sidenav-content">
+  <mat-sidenav-content class="sidenav-content" >
       <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
