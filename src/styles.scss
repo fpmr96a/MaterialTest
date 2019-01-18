@@ -146,6 +146,10 @@ mat-form-field.mat-form-field {
     min-height: 100%;
     margin-left: 5px;
 }
+
+.mat-drawer-container{
+    position:fixed !important;
+}
  
 .sidenav-content {
     display: flex;
