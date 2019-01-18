@@ -5,7 +5,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule, MatCheckboxModule, MatMenuModule,
         MatTabsModule, MatCardModule, MatIconModule,
-        MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule,  MatSidenavModule,} from '@angular/material';
+        MatFormFieldModule, MatInputModule, MatTableModule, 
+        MatToolbarModule, MatSortModule,  MatSidenavModule,} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';        
 
 import { AppRoutingModule } from './app-routing.module';
@@ -45,6 +46,7 @@ import { ConfirmDialogComponent } from './dialog/confirm-dialog.component';
     MatSortModule,
     MatMenuModule,
     MatSidenavModule,
+    MatToolbarModule,
     FlexLayoutModule,
     GridModule,
     HttpClientModule
