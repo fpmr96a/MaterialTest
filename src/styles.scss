@@ -176,6 +176,15 @@ mat-form-field.mat-form-field {
       color: #fff !important;
   }
 
+  .sticky-footer {
+      position: fixed;
+      left:300px;
+      bottom: 0;
+      height: 35px;
+      width: 100%;
+      background: linear-gradient(to left, rgba(255,0,0,0), rgb(46, 77, 123));
+
+  }
 /* .mat-menu-item {
     background-color: #ccc4b5;
 } */
