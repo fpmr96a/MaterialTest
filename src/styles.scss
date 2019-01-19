@@ -147,6 +147,8 @@ mat-form-field.mat-form-field {
     margin-left: 5px;
 }
 
+ // This forces header and navigation areas to remain fixed after scrolling
+ // =======================================================================
 .mat-drawer-container{
     position:fixed !important;
 }
@@ -178,12 +180,26 @@ mat-form-field.mat-form-field {
 
   .sticky-footer {
       position: fixed;
-      left:300px;
+      left:175px;
       bottom: 0;
       height: 35px;
-      width: 100%;
-      background: linear-gradient(to left, rgba(255,0,0,0), rgb(46, 77, 123));
+      width: 90%;
+ 
+  }
+  .sticky-footer-left {
+    background: linear-gradient(to right, rgba(255,0,0,0), rgb(255,247,231));
 
+  }
+
+  .sticky-footer-right {
+    background: linear-gradient(to left, rgba(255,0,0,0), rgb(255,247,231));
+
+  }
+
+  .sticky-footer-center {
+    color: white;
+    background-color: #FFF7E7;
+ 
   }
 /* .mat-menu-item {
     background-color: #ccc4b5;
