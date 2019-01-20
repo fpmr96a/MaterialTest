@@ -25,11 +25,14 @@ $accent: #a9a9a9;
 $lightergray: #cccccc;
 $secondary: #FFF7E7;
 
+// Button
+// =======
 .mat-raised-button.mat-primary {
     background-color:$primary ;
-    height: 35px;
-    margin-left: 10px;
-    margin-right: 10px;
+    height: 30px;
+
+    font-size: 12px;
+    line-height: 30px;
 }
 
 // Color of Active Tab Underline
@@ -184,7 +187,7 @@ mat-form-field.mat-form-field {
       position: fixed;
       left:175px;
       bottom: 0;
-      height: 45px;
+      height: 35px;
       width: 85%;
       background: -moz-linear-gradient(left, rgba(255,247,231,1) 0%, rgba(255,247,231,1) 75%, rgba(255,247,231,0) 100%); /* FF3.6-15 */
       background: -webkit-linear-gradient(left, rgba(255,247,231,1) 0%,rgba(255,247,231,1) 75%,rgba(255,247,231,0) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -192,11 +195,13 @@ mat-form-field.mat-form-field {
       
   }
   .sticky-footer-left {
-    color: black
+    color: gray;
+    font-size: 10px;
 }
 
   .sticky-footer-right {
-color: black
+    color: gray;
+    font-size: 10px;
 
   }
 
