@@ -28,6 +28,8 @@ $secondary: #FFF7E7;
 .mat-raised-button.mat-primary {
     background-color:$primary ;
     height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 // Color of Active Tab Underline
@@ -182,24 +184,26 @@ mat-form-field.mat-form-field {
       position: fixed;
       left:175px;
       bottom: 0;
-      height: 35px;
-      width: 90%;
- 
+      height: 45px;
+      width: 85%;
+      background: -moz-linear-gradient(left, rgba(255,247,231,1) 0%, rgba(255,247,231,1) 75%, rgba(255,247,231,0) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, rgba(255,247,231,1) 0%,rgba(255,247,231,1) 75%,rgba(255,247,231,0) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, rgba(255,247,231,1) 0%,rgba(255,247,231,1) 75%,rgba(255,247,231,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      
   }
   .sticky-footer-left {
-    background: linear-gradient(to right, rgba(255,0,0,0), rgb(255,247,231));
-
-  }
+    color: black
+}
 
   .sticky-footer-right {
-    background: linear-gradient(to left, rgba(255,0,0,0), rgb(255,247,231));
+color: black
 
   }
 
   .sticky-footer-center {
     color: white;
-    background-color: #FFF7E7;
- 
+
+
   }
 /* .mat-menu-item {
     background-color: #ccc4b5;
