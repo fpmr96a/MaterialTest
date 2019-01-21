@@ -1,5 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { Router} from '@angular/router'
+import { MatDialog } from '@angular/material/dialog';
+import { EmployeeProfileDialogComponent } from './admin/employee-profile-dialog.component';
+
 
 @Component({
   selector: 'app-root',
@@ -11,7 +14,7 @@ export class AppComponent implements OnInit{
   navLinks: any[];
   activeLinkIndex = -1;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, public dialog: MatDialog) {
     this.navLinks = [
         {
             label: 'My Transfer List',
@@ -37,4 +40,11 @@ ngOnInit(): void {
       this.activeLinkIndex = this.navLinks.indexOf(this.navLinks.find(tab => tab.link === '.' + this.router.url));
   });
 }
+
+openEmployeeProfile(): void {
+    this.dialog.open(EmployeeProfileDialogComponent, {
+        width: '450px'
+    })
+  }   
+
 }

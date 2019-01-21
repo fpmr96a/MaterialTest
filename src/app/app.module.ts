@@ -6,7 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule, MatCheckboxModule, MatMenuModule,
         MatTabsModule, MatCardModule, MatIconModule,
         MatFormFieldModule, MatInputModule, MatTableModule, 
-        MatToolbarModule, MatSortModule,  MatSidenavModule,} from '@angular/material';
+        MatToolbarModule, MatSortModule,  MatSidenavModule } from '@angular/material';
+import { MatDialogModule} from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';        
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +18,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { VacanciesComponent } from './vacancy/vacancies.component';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { ReportsComponent } from './reports/reports.component';
+
 import { ConfirmDialogComponent } from './dialog/confirm-dialog.component';
+import { NewMyTransferlistDialogComponent } from './transferlists/new-my-transferlist-dialog.component';
+import { EmployeeProfileDialogComponent } from './admin/employee-profile-dialog.component';
 
 
 @NgModule({
@@ -27,7 +31,12 @@ import { ConfirmDialogComponent } from './dialog/confirm-dialog.component';
     FilteredTransferlistComponent,
     VacanciesComponent,
     ReportsComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    NewMyTransferlistDialogComponent,
+    EmployeeProfileDialogComponent
+  ],
+  entryComponents: [
+    EmployeeProfileDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +56,7 @@ import { ConfirmDialogComponent } from './dialog/confirm-dialog.component';
     MatMenuModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatDialogModule,
     FlexLayoutModule,
     GridModule,
     HttpClientModule
