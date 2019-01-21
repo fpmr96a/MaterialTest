@@ -45,13 +45,35 @@ $secondary: #FFF7E7;
 // ===========================
 mat-form-field.mat-form-field {
     font-size: 14px;
-    
+   
 }
  .mat-form-field-appearance-outline .mat-form-field-infix {
     padding:8px;
  }
+
+// Text Box outline color
+// ===================== 
+ .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: $primary !important;
+ }
+
+ // Text box placeholder label text
+ // ================================
+ /* mat-form-field {
+     .mat-hint, input, ::placeholder, mat-form-field-label {
+        color: green !important; 
+     }
+ } */
+
+ // Text Box Label when it  has the focus
+ // =====================================
+ .mat-form-field.mat-focused .mat-form-field-label {
+     color: $primary !important;
+ }
+
 .mat-form-field-wrapper {
     padding-bottom:.50em;
+   
 }
 
   
@@ -163,6 +185,8 @@ mat-form-field.mat-form-field {
     border-top: gainsboro .5px solid;
 }
 
+// Material Menu
+// =============
 .mat-menu-item {
     color: #00264f !important;
   }
@@ -176,6 +200,8 @@ mat-form-field.mat-form-field {
       color: #fff !important;
   }
 
+  // Sticky Footer
+  // =============
   .sticky-footer {
       position: fixed;
       left:175px;
@@ -185,29 +211,42 @@ mat-form-field.mat-form-field {
       background: -moz-linear-gradient(left, rgba(255,247,231,1) 0%, rgba(255,247,231,1) 75%, rgba(255,247,231,0) 100%); /* FF3.6-15 */
       background: -webkit-linear-gradient(left, rgba(255,247,231,1) 0%,rgba(255,247,231,1) 75%,rgba(255,247,231,0) 100%); /* Chrome10-25,Safari5.1-6 */
       background: linear-gradient(to right, rgba(255,247,231,1) 0%,rgba(255,247,231,1) 75%,rgba(255,247,231,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      
   }
-  .sticky-footer-left {
+
+.sticky-footer-left {
     color: gray;
     font-size: 10px;
 }
 
-  .sticky-footer-right {
+.sticky-footer-right {
     color: gray;
     font-size: 10px;
     width: 20%;
+}
 
-  }
-
-  .sticky-footer-center {
+.sticky-footer-center {
     color: white;
+}
 
+// Dialog Container
+.dialog-container {
+    display: flex;
+    flex-direction: column;
+}
+.dialog-container > * {
+    width: 100%;
+}
 
-  }
-/* .mat-menu-item {
-    background-color: #ccc4b5;
-} */
-
+.dialog-header-rounded-left {
+    height: 30px;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    margin-left: 20px;
+    background-color: white;
+    margin-bottom: 10px;
+    background: linear-gradient(to left, rgba(255,0,0,0), rgb(46, 77, 123));
+   }
   //@import '~@progress/kendo-theme-material/scss/all';
   @import '~@progress/kendo-theme-default/scss/all';
 

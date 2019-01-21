@@ -1,6 +1,35 @@
-<h2 mat-dialog-title>Employee Profile</h2>
+<div mat-dialog-title class="dialog-header-rounded-left"><p style="margin-left:10px;">Employee Profile</p></div>
 <mat-dialog-content>
-
+  <Div class="dialog-container">
+    <div class='input-row' 
+      fxLayout
+      fxLayout.xs='column'
+      fxLayoutGap='10px'
+      fxLayoutGap.xs='0'>
+      <mat-form-field appearance="outline" fxFlex color="primary">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="First Name" >
+      </mat-form-field>
+      </div>
+      <div class='input-row'>
+      <mat-form-field appearance="outline" fxFlex color="primary">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Last Name">
+        </mat-form-field>
+    </div>
+    <div class='input-row'>
+        <mat-form-field appearance="outline" fxFlex color="primary">
+            <mat-label>Daytime Phone</mat-label>
+            <input matInput placeholder="Daytime Phone" >
+          </mat-form-field>
+    </div>
+    <div class='input-row'>
+        <mat-radio-group>
+          <mat-radio-button value="true">Yes</mat-radio-button>
+          <mat-radio-button value="true">No</mat-radio-button>
+        </mat-radio-group>
+    </div>
+  </Div>
 </mat-dialog-content>
 <mat-dialog-actions>
   <button mat-button color="primary" (click)="save()">

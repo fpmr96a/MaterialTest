@@ -6,7 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule, MatCheckboxModule, MatMenuModule,
         MatTabsModule, MatCardModule, MatIconModule,
         MatFormFieldModule, MatInputModule, MatTableModule, 
-        MatToolbarModule, MatSortModule,  MatSidenavModule } from '@angular/material';
+        MatToolbarModule, MatSortModule,  MatSidenavModule,
+        MatRadioModule } from '@angular/material';
 import { MatDialogModule} from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';        
 
@@ -57,6 +58,7 @@ import { EmployeeProfileDialogComponent } from './admin/employee-profile-dialog.
     MatSidenavModule,
     MatToolbarModule,
     MatDialogModule,
+    MatRadioModule,
     FlexLayoutModule,
     GridModule,
     HttpClientModule
