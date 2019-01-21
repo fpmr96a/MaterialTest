@@ -22,7 +22,7 @@
           <button mat-button [matMenuTriggerFor]="tools" style="margin-left:20px;">Tools</button>
           <mat-menu #tools="matMenu">
             <button mat-menu-item [matMenuTriggerFor]="docs">Documentation</button>
-            <button mat-menu-item >Employee Profile</button>
+            <button mat-menu-item (click)="openEmployeeProfile()">Employee Profile</button>
             <button mat-menu-item >Add to Transfer Lists</button>
             <button mat-menu-item >Delete Transfer Lists</button>
             <button mat-menu-item >Employee Seniority</button>
@@ -34,6 +34,9 @@
             <button mat-menu-item >Facilities and Functional Units</button>
             <button mat-menu-item >Functional Job Descriptions</button>
           </mat-menu>
+          <button mat-icon-button style="margin-left: 40px; margin-top: 10px; color: gray;">
+            <mat-icon >home</mat-icon> 
+          </button>
   </mat-sidenav>
   <mat-sidenav-content class="sidenav-content" >
       <router-outlet></router-outlet>
