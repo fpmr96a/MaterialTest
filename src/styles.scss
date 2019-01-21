@@ -28,7 +28,7 @@ $secondary: #FFF7E7;
 // Button
 // =======
 .mat-raised-button.mat-primary {
-    background-color:#5e79aa ;
+    background-color: $primary ;
     height: 30px;
 
     font-size: 12px;
@@ -195,6 +195,7 @@ mat-form-field.mat-form-field {
   .sticky-footer-right {
     color: gray;
     font-size: 10px;
+    width: 20%;
 
   }
 
