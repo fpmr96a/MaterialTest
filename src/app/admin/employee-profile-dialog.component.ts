@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material';
 import { EmployeeProfile } from '../models/EmployeeProfile';
 
 @Component({
@@ -10,7 +11,8 @@ import { EmployeeProfile } from '../models/EmployeeProfile';
 export class EmployeeProfileDialogComponent implements OnInit {
 
   employeeProfile: EmployeeProfile;
-  constructor(private dialogRef: MatDialogRef<EmployeeProfileDialogComponent>) {
+  constructor(private dialogRef: MatDialogRef<EmployeeProfileDialogComponent>,
+              public snackBar: MatSnackBar) {
     
    }
 
@@ -20,10 +22,14 @@ export class EmployeeProfileDialogComponent implements OnInit {
 
   save() {
     this.dialogRef.close(this.employeeProfile);
+    this.snackBar.open('Employee Profile Saved ...', 'Complete', {duration: 1500,
+    });
   }
 
   dismiss() {
     this.dialogRef.close(null);
+    this.snackBar.open('Employee Profile Changes Disgarded ...', '', {duration: 1500,
+    });
   }
 
 }

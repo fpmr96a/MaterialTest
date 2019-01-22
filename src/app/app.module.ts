@@ -7,7 +7,7 @@ import {MatButtonModule, MatCheckboxModule, MatMenuModule,
         MatTabsModule, MatCardModule, MatIconModule,
         MatFormFieldModule, MatInputModule, MatTableModule, 
         MatToolbarModule, MatSortModule,  MatSidenavModule,
-        MatRadioModule } from '@angular/material';
+        MatRadioModule, MatSnackBarModule  } from '@angular/material';
 import { MatDialogModule} from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';        
 
@@ -59,6 +59,7 @@ import { EmployeeProfileDialogComponent } from './admin/employee-profile-dialog.
     MatToolbarModule,
     MatDialogModule,
     MatRadioModule,
+    MatSnackBarModule,
     FlexLayoutModule,
     GridModule,
     HttpClientModule
