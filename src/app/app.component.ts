@@ -45,7 +45,8 @@ ngOnInit(): void {
 openEmployeeProfile(): void {
     let dialogRef = this.dialog.open(EmployeeProfileDialogComponent, {
         width: '450px',
-        height: '450px' 
+        height: '470px',
+        disableClose: true
     });
 
     dialogRef.afterClosed().subscribe(result => {
