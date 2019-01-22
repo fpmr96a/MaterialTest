@@ -1,25 +1,27 @@
 <div mat-dialog-title class="dialog-header-rounded-left"><p style="margin-left:10px;">Employee Profile</p></div>
-<div fxLayout="column" fxLayoutAlign="space-around start" >
-    
-      <mat-form-field appearance="outline" flex color="primary">
+<!-- <div fxLayout="column" fxLayoutAlign="space-around start" > -->
+    <div>
+      <mat-form-field appearance="outline" style="width: 100%;" >
         <mat-label>First Name</mat-label>
         <input matInput placeholder="First Name" >
       </mat-form-field>
    
-      <mat-form-field appearance="outline" flex color="primary">
+      <mat-form-field appearance="outline" style="width: 100%;" >
         <mat-label>Last Name</mat-label>
-        <input matInput placeholder="Last Name">
+        <input matInput placeholder="Last Name" >
       </mat-form-field>
    
-      <mat-form-field appearance="outline" flex color="primary">
+      <mat-form-field appearance="outline"  style="width: 100%;">
           <mat-label>Daytime Phone</mat-label>
           <input matInput placeholder="Daytime Phone" >
       </mat-form-field>
-      <p flex>Bilinggual</p>
-      <mat-radio-group flex>
-        <mat-radio-button style="color: green; padding-right: 10px;" value="true">Yes</mat-radio-button>
-        <mat-radio-button value="true">No</mat-radio-button>
-      </mat-radio-group>
+      <div fxLayout="row" fxLayoutAlign="start center">
+        <p flex style="padding-right: 10px;">Bilingual:</p>
+        <mat-radio-group flex >
+          <mat-radio-button flex style="padding-right: 10px;" value="1">Yes</mat-radio-button>
+          <mat-radio-button flex style="padding-right: 10px;"value="0">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
  </div>
  <mat-dialog-actions>
   <button mat-button color="primary" (click)="save()">

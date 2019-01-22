@@ -247,6 +247,21 @@ mat-form-field.mat-form-field {
     margin-bottom: 10px;
     background: linear-gradient(to left, rgba(255,0,0,0), rgb(46, 77, 123));
    }
+
+   // Radio Button Styling
+   // ====================
+   .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+    border-color:$primary;
+  }
+  
+  .mat-radio-button.mat-accent .mat-radio-inner-circle{
+    color:$primary;
+    background-color:$primary;
+  }
+  
+  .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+      background-color:gray;
+  }
   //@import '~@progress/kendo-theme-material/scss/all';
   @import '~@progress/kendo-theme-default/scss/all';
 
