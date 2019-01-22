@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { EmployeeProfile } from '../models/EmployeeProfile';
 
 @Component({
   selector: 'app-employee-profile-dialog',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeProfileDialogComponent implements OnInit {
 
-  constructor() { }
+  employeeProfile: EmployeeProfile;
+  constructor(private dialogRef: MatDialogRef<EmployeeProfileDialogComponent>) {
+    
+   }
 
   ngOnInit() {
+    // this.employeeProfile = new EmployeeProfile();
+  }
+
+  save() {
+    this.dialogRef.close(this.employeeProfile);
+  }
+
+  dismiss() {
+    this.dialogRef.close(null);
   }
 
 }

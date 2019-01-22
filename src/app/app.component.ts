@@ -14,7 +14,8 @@ export class AppComponent implements OnInit{
   navLinks: any[];
   activeLinkIndex = -1;
 
-  constructor(private router: Router, public dialog: MatDialog) {
+  constructor(private router: Router, 
+              public dialog: MatDialog) {
     this.navLinks = [
         {
             label: 'My Transfer List',
