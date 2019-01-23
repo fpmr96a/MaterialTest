@@ -264,9 +264,27 @@ mat-form-field.mat-form-field {
       background-color:gray !important;
   }
 
+  .logoff-slider-toggle {
+    position: fixed;
+    left:50px;
+    bottom: 0;
+    padding-bottom: 20px;
+    height: 35px;
+    color: $primary;
+    font-size: 14px;
+}
+
+// Slide Toggle BEFORE being checked (slid to left)
+// =================================================
+mat-slide-toggle:not(.mat-checked):not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: $primary; 
+  }
+/*
+  .mat-checked  .mat-slide-toggle-bar {
+    background-color: green !important; 
+  }
+ */
   
-
-
   //@import '~@progress/kendo-theme-material/scss/all';
   @import '~@progress/kendo-theme-default/scss/all';
 

@@ -7,8 +7,9 @@ import {MatButtonModule, MatCheckboxModule, MatMenuModule,
         MatTabsModule, MatCardModule, MatIconModule,
         MatFormFieldModule, MatInputModule, MatTableModule, 
         MatToolbarModule, MatSortModule,  MatSidenavModule,
-        MatRadioModule, MatSnackBarModule  } from '@angular/material';
+        MatRadioModule, MatSnackBarModule, MatSliderModule  } from '@angular/material';
 import { MatDialogModule} from '@angular/material/dialog';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FlexLayoutModule } from '@angular/flex-layout';        
 
 import { AppRoutingModule } from './app-routing.module';
@@ -60,6 +61,7 @@ import { EmployeeProfileDialogComponent } from './admin/employee-profile-dialog.
     MatDialogModule,
     MatRadioModule,
     MatSnackBarModule,
+    MatSlideToggleModule,
     FlexLayoutModule,
     GridModule,
     HttpClientModule
