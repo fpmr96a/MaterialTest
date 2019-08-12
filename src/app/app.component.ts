@@ -33,7 +33,11 @@ export class AppComponent implements OnInit{
             label: 'Reports',
             link: './reports',
             index: 1
-         }, 
+         }, {
+            label: 'Stimulsoft Reports',
+            link: './stimulsoft',
+            index: 1
+       }, 
     ];
 }
 ngOnInit(): void {

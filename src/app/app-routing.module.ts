@@ -4,6 +4,8 @@ import { MyTransferlistComponent } from './transferlists/my-transferlist.compone
 import { FilteredTransferlistComponent } from './transferlists/filtered-transferlist.component';
 import { VacanciesComponent } from './vacancy/vacancies.component'
 import { ReportsComponent } from './reports/reports.component'
+import { StimulsoftComponent } from './stimulsoft/stimulsoft.component'
+
 
 
 const routes: Routes = [
@@ -11,6 +13,7 @@ const routes: Routes = [
   { path: 'filteredtransferlist', component: FilteredTransferlistComponent },
   { path: 'vacancy', component: VacanciesComponent },
   { path: 'reports', component: ReportsComponent },
+  { path: 'stimulsoft', component: StimulsoftComponent },
   { path: '', redirectTo: 'mytransferlist', pathMatch: 'full'},
   { path: '**', redirectTo: 'mytransferlist', pathMatch: 'full'}
 ]

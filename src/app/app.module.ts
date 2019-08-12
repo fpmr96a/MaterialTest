@@ -24,6 +24,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { ConfirmDialogComponent } from './dialog/confirm-dialog.component';
 import { NewMyTransferlistDialogComponent } from './transferlists/new-my-transferlist-dialog.component';
 import { EmployeeProfileDialogComponent } from './admin/employee-profile-dialog.component';
+import { StimulsoftComponent } from './stimulsoft/stimulsoft.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { EmployeeProfileDialogComponent } from './admin/employee-profile-dialog.
     ReportsComponent,
     ConfirmDialogComponent,
     NewMyTransferlistDialogComponent,
-    EmployeeProfileDialogComponent
+    EmployeeProfileDialogComponent,
+    StimulsoftComponent
   ],
   entryComponents: [
     EmployeeProfileDialogComponent
