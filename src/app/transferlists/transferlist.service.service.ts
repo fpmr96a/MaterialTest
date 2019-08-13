@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
@@ -13,6 +13,7 @@ import { MyTransferList } from '../models/MyTransferList';
 export class TransferlistService {
   //private transferlistUrl = 'api/todo';
   private todoUrl = 'https://localhost:5001/api/Todo/ ';
+  private webApiUrl = 'http://10.15.56.123:8080/api';
   private transferlistUrl = 'https://localhost:5001/api/MyTransferList/ ';
   // the value assigned, when using a real back-end web service would be:
   //  'www.myWebService.com/api/products';
@@ -35,7 +36,16 @@ export class TransferlistService {
       );
   }
 
-
+  getMyTransferListByJobcode(jobcodeSearch: string): Observable<MyTransferList[]> {
+    jobcodeSearch = jobcodeSearch.trim();
+    const options = jobcodeSearch ? { params: new HttpParams().set('jobcode4', jobcodeSearch) } : {};
+    
+    return this.http.get<MyTransferList[]>(this.webApiUrl + '/TransferListEmployee/ByEmployee/' + 'faraclass' + '/' + jobcodeSearch)
+      .pipe(
+        tap(data => console.log(JSON.stringify(data))),
+        catchError(this.handleError)
+      );
+  }
   private handleError(err) {
     // in a real world app, we may send the server to some remote logging infrastructure
     // instead of just logging it to the console

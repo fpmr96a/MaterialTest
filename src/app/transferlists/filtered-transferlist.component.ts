@@ -43,7 +43,7 @@ export class FilteredTransferlistComponent implements OnInit {
 
     //this.dataSource.paginator = this.paginator;
 
-    this.transferlistService.getMyTransferList().subscribe(
+    this.transferlistService.getMyTransferListByJobcode('5724').subscribe(
       mytransferlists => {
         this.dataSource.data = mytransferlists;
         this.dataSource.sort = this.sort;
